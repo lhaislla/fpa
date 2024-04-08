@@ -24,7 +24,7 @@ class ResetPasswordScreen extends StatelessWidget {
               SizedBox(height: 20),
               DefaultButton(
                 onPressed: () {
-                  // Lógica de cadastro
+                  // Lógica de reset de senha
                 },
                 text: 'Send password \nin this email',
               ),

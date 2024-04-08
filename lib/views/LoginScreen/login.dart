@@ -36,13 +36,13 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () {},
                 text: 'Sign in',
               ),
-              SizedBox(height: 5),
               SecondButton(
                 padding: "8",
                 onPressed: () async {},
                 icon: Icons.account_circle,
                 text: 'Conectar com Google',
               ),
+              SizedBox(height: 20),
               GestureDetector(
                 onTap: () {
                   Navigator.push(
