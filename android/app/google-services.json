@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "247669622807",
+    "project_id": "fpa2024-ef00d",
+    "storage_bucket": "fpa2024-ef00d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247669622807:android:5b50eeb6128028b2b2b452",
+        "android_client_info": {
+          "package_name": "com.example.fpa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_EuUcp6er1iCRHIeX2izauTGOKR96sh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

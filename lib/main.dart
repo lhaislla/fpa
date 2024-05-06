@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fpa/core/routes/routes.dart';
-import 'package:fpa/views/LoginScreen/login.dart';
-import 'package:fpa/views/LoginScreen/cadastro.dart';
-import 'package:fpa/views/LoginScreen/reset_password.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:fpa/core/routes/routes.dart';
+// import 'package:flutter/services.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

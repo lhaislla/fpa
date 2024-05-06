@@ -9,60 +9,51 @@ class CadastroScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height: 20),
-              AppIcon(),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: AppInput(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height: 20),
+                AppIcon(),
+                SizedBox(height: 20),
+                AppInput(
                   hintText: "Username",
                 ),
-              ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: AppInput(
+                SizedBox(height: 20),
+                AppInput(
                   hintText: "E-mail",
                 ),
-              ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: AppInput(
+                SizedBox(height: 20),
+                AppInput(
                   hintText: "Password",
                 ),
-              ),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: AppInput(
+                SizedBox(height: 20),
+                AppInput(
                   hintText: "Confirm Password",
                 ),
-              ),
-              SizedBox(height: 20),
-              DefaultButton(
-                onPressed: () {
-                  // Lógica de cadastro
-                },
-                text: 'Sign up',
-              ),
-              SizedBox(height: 20),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Back to Sign in',
-                  style: TextStyle(
-                    color: Colors.black,
-                    decoration: TextDecoration.underline,
+                SizedBox(height: 20),
+                DefaultButton(
+                  onPressed: () {
+                    // Cadastro
+                  },
+                  text: 'Sign up',
+                ),
+                SizedBox(height: 20),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    'Back to Sign in',
+                    style: TextStyle(
+                      color: Colors.black,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

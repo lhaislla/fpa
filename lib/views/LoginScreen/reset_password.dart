@@ -9,38 +9,41 @@ class ResetPasswordScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height: 20),
-              AppIcon(),
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: AppInput(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height: 20),
+                AppIcon(),
+                SizedBox(height: 20),
+                AppInput(
+                  controller: emailController,
+                  hintText: "E-mail",
                   hintText: "E-mail",
                 ),
-              ),
-              SizedBox(height: 20),
-              DefaultButton(
-                onPressed: () {
-                  // Lógica de reset de senha
-                },
-                text: 'Send password \nin this email',
-              ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Text(
-                  'Back to Sign in',
-                  style: TextStyle(
-                    color: Colors.black,
-                    decoration: TextDecoration.underline,
+                SizedBox(height: 20),
+                DefaultButton(
+                  onPressed: () {
+                    // Reset de senha
+                  },
+                  text: 'Send password \nin this email',
+                ),
+                SizedBox(height: 20),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text(
+                    'Back to Sign in',
+                    style: TextStyle(
+                      color: Colors.black,
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
