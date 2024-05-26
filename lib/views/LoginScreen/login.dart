@@ -6,8 +6,9 @@ import 'package:fpa/shared/widgets/Inputs/AppInput.dart';
 import 'package:fpa/views/LoginScreen/cadastro.dart';
 import 'package:fpa/views/LoginScreen/reset_password.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fpa/views/home_monitoramento.dart';
+import 'package:fpa/views/ViewScreen/home_monitoramento.dart';
 import 'package:fpa/services/auth_service.dart';
+import 'package:fpa/shared/widgets/menu_lateral.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
@@ -24,7 +25,7 @@ class LoginScreen extends StatelessWidget {
       // Se o login for bem-sucedido, navegue para a próxima tela
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeMonitoramentoPage()),
+        MaterialPageRoute(builder: (context) => Home()),
       );
     } catch (e) {
       // Em caso de erro, exiba uma mensagem ou trate de outra forma
@@ -72,8 +73,7 @@ class LoginScreen extends StatelessWidget {
                         // Se o login com Google for bem-sucedido, navegue para a próxima tela
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) => HomeMonitoramentoPage()),
+                          MaterialPageRoute(builder: (context) => Home()),
                         );
                       } else {
                         // Handle null case if needed
@@ -125,6 +125,7 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
       ),
+      drawer: MenuLateral(), // Adiciona o menu lateral no lado esquerdo
     );
   }
 }

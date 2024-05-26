@@ -1,7 +1,5 @@
-// menu_lateral.dart
-
 import 'package:flutter/material.dart';
-import 'package:fpa/services/log_out.dart'; // Importe o arquivo log_out.dart
+import 'package:fpa/services/log_out.dart';
 
 class MenuLateral extends StatelessWidget {
   @override
@@ -15,7 +13,7 @@ class MenuLateral extends StatelessWidget {
               color: Colors.grey, // Cor de fundo do cabeçalho
             ),
             child: Text(
-              'Menu',
+              'Site Checked',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
@@ -23,27 +21,33 @@ class MenuLateral extends StatelessWidget {
             ),
           ),
           ListTile(
+            leading: Icon(Icons.home),
+            title: Text('Home'),
+            onTap: () {
+              Navigator.pushNamed(context, '/homeMonitoramento');
+            },
+          ),
+          Spacer(),
+          ListTile(
             leading: Icon(Icons.view_list),
             title: Text('Views'),
             onTap: () {
-              // Implemente a navegação para a página de views
-              Navigator.pushNamed(context, '/views');
+              Navigator.pushNamed(context, '/view_monitoramento');
             },
           ),
           ListTile(
             leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {
-              // Implemente a navegação para a página de configurações
               Navigator.pushNamed(context, '/settings');
             },
           ),
-          Spacer(), // Adiciona um espaçamento flexível
+          Spacer(),
           ListTile(
             leading: Icon(Icons.exit_to_app),
             title: Text('Logout'),
             onTap: () {
-              LogOut.signOut(context); // Chama a função de logout
+              LogOut.signOut(context);
             },
           ),
         ],
