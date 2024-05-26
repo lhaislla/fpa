@@ -39,7 +39,7 @@ class MenuLateral extends StatelessWidget {
             leading: Icon(Icons.settings),
             title: Text('Settings'),
             onTap: () {
-              Navigator.pushNamed(context, '/settings');
+              Navigator.pushNamed(context, '/user_settings');
             },
           ),
           Spacer(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fpa/views/LoginScreen/User_settings.dart';
 import 'package:fpa/views/LoginScreen/login.dart';
 import 'package:fpa/views/LoginScreen/cadastro.dart';
 import 'package:fpa/views/LoginScreen/reset_password.dart';
@@ -14,5 +15,6 @@ Map<String, WidgetBuilder> loadRoutes(BuildContext context) {
     '/homeMonitoramento': (context) => Home(),
     '/view_monitoramento': (context) => ViewMonitoramento(),
     '/new_view': (context) => NewViewScreen(),
+    '/user_settings': (context) => UserSettingsScreen(),
   };
 }

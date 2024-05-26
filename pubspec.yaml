@@ -42,7 +42,7 @@ dependencies:
   cloud_functions: ^4.7.5
   google_sign_in: ^5.2.1
   cloud_firestore: 4.16.1
-
+  fluttertoast: ^8.0.7
 
 
 dev_dependencies:

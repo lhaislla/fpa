@@ -118,7 +118,7 @@ class _NewViewScreenState extends State<NewViewScreen> {
                           child: Text(value),
                         );
                       }).toList(),
-                      labelText: 'Verification Period <hour>',
+                      labelText: '',
                     ),
                   ),
                 ],

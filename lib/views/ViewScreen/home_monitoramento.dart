@@ -6,14 +6,14 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Site Checked'),
+        title: Text('Home'),
         centerTitle: true,
         backgroundColor: Colors.white60,
       ),
       drawer: MenuLateral(),
       body: Center(
         child: Text(
-          'Home',
+          'Site Checked',
           style: TextStyle(fontSize: 24.0),
         ),
       ),
