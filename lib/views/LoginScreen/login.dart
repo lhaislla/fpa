@@ -6,11 +6,13 @@ import 'package:fpa/shared/widgets/Inputs/AppInput.dart';
 import 'package:fpa/views/LoginScreen/cadastro.dart';
 import 'package:fpa/views/LoginScreen/reset_password.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fpa/views/tela_branca.dart';
+import 'package:fpa/views/home_monitoramento.dart';
+import 'package:fpa/services/auth_service.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+
   Future<void> _signInWithEmailAndPassword(BuildContext context) async {
     try {
       UserCredential userCredential =
@@ -18,12 +20,16 @@ class LoginScreen extends StatelessWidget {
         email: _emailController.text,
         password: _passwordController.text,
       );
+
+      // Se o login for bem-sucedido, navegue para a próxima tela
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => ProximaTela()),
+        MaterialPageRoute(builder: (context) => HomeMonitoramentoPage()),
       );
     } catch (e) {
+      // Em caso de erro, exiba uma mensagem ou trate de outra forma
       print("Error signing in: $e");
+      // Aqui você poderia exibir um AlertDialog, Snackbar, etc.
     }
   }
 
@@ -46,9 +52,10 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 AppInput(
-                    hintText: "Password",
-                    obscureText: true,
-                    controller: _passwordController),
+                  hintText: "Password",
+                  obscureText: true,
+                  controller: _passwordController,
+                ),
                 SizedBox(height: 20),
                 DefaultButton(
                   onPressed: () async {
@@ -58,7 +65,25 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SecondButton(
                   padding: "8",
-                  onPressed: () async {},
+                  onPressed: () async {
+                    try {
+                      UserCredential? userCredential = await signInWithGoogle();
+                      if (userCredential != null) {
+                        // Se o login com Google for bem-sucedido, navegue para a próxima tela
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomeMonitoramentoPage()),
+                        );
+                      } else {
+                        // Handle null case if needed
+                        print("Login com Google falhou");
+                      }
+                    } catch (e) {
+                      print("Erro ao fazer login com Google: $e");
+                      // Trate o erro aqui, exiba uma mensagem, etc.
+                    }
+                  },
                   icon: Icons.account_circle,
                   text: 'Conectar com Google',
                 ),
