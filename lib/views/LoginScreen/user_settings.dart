@@ -63,7 +63,7 @@ class _UserSettingsScreenState extends State<UserSettingsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Settings'),
+        title: Text('Edit User'),
         centerTitle: true,
       ),
       body: Padding(
@@ -80,7 +80,7 @@ class _UserSettingsScreenState extends State<UserSettingsScreen> {
               hintText: '',
               controller: _usernameController,
             ),
-            SizedBox(height: 16.0),
+            SizedBox(height: 32.0),
             RoundedButton(
               onPressed: () {
                 _updateUsername(_usernameController.text.trim());
