@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:247669622807:android:5b50eeb6128028b2b2b452",
         "android_client_info": {
-          "package_name": "com.example.fpa"
+          "package_name": "sitechecker.fpa"
         }
       },
       "oauth_client": [],

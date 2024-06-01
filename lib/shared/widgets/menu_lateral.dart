@@ -15,7 +15,7 @@ class MenuLateral extends StatelessWidget {
                 color: Colors.grey, // Cor de fundo do cabeçalho
               ),
               child: Text(
-                'Site Checked',
+                'Site Checker',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,

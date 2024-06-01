@@ -6,7 +6,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home'),
+        title: Text('Site Checker'),
         centerTitle: true,
         backgroundColor: Colors.white60,
       ),
@@ -23,26 +23,16 @@ class Home extends StatelessWidget {
                   width: 200, // Aumentando o tamanho da logo
                   height: 200,
                 ),
-                SizedBox(height: 20.0),
+                SizedBox(height: 10.0),
                 Text(
-                  'Site Checked',
-                  style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(height: 20.0),
-                Text(
-                  'O Site Checked é um aplicativo desenvolvido em Flutter que oferece uma solução para monitoramento de disponibilidade de sites. ',
+                  'O Site Checker oferece uma solução para monitoramento de disponibilidade de sites. E tem com funcionalidades: ',
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 16.0),
                 ),
-                SizedBox(height: 20.0),
-                Text(
-                  'Funcionalidades',
-                  style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-                ),
                 SizedBox(height: 10.0),
                 Text(
-                  '• Verificação de Disponibilidade: Site Checked permite verificar se um site está ativo ou inativo com base na comparação de um hash único associado a ele.\n'
-                  '• Monitoramento Automatizado: O aplicativo realiza verificações periódicas de disponibilidade dos sites, comparando o hash atual com o hash armazenado. Qualquer alteração no hash indica uma possível mudança na disponibilidade do site.',
+                  '• Verificação de Disponibilidade: Site Checker permite verificar se um site está ativo ou inativo com base na comparação de um hash único associado a ele.\n'
+                  '• Monitoramento Automatizado: O aplicativo realiza verificações periódicas de disponibilidade dos sites.',
                   textAlign: TextAlign.justify,
                   style: TextStyle(fontSize: 16.0),
                 ),
