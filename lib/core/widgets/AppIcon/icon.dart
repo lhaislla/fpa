@@ -7,7 +7,7 @@ class AppIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.zero,
-      child: Image.asset('assets/image/logo_fpa.png', width: 300, height: 300),
+      child: Image.asset('assets/image/logo.png', width: 300, height: 300),
     );
   }
 }

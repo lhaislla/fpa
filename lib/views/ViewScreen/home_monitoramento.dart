@@ -19,7 +19,7 @@ class Home extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'assets/image/logo_fpa.png',
+                  'assets/image/logo.png',
                   width: 200, // Aumentando o tamanho da logo
                   height: 200,
                 ),
