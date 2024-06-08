@@ -1,5 +1,3 @@
-// view.dart
-
 import 'package:flutter/material.dart';
 import 'package:fpa/shared/widgets/containers_list.dart';
 import 'package:fpa/shared/widgets/menu_lateral.dart';
@@ -13,22 +11,22 @@ class ViewMonitoramento extends StatefulWidget {
 class _ViewMonitoramentoState extends State<ViewMonitoramento> {
   List<ContainerItem> containerItems = [
     ContainerItem(
-      aliasView: 'Container 1',
-      viewUrl: 'https://example.com/container1',
+      aliasView: 'UFRPE',
+      viewUrl: 'https://ufrpe.br/',
       verificationNumber: 1,
-      verificationHour: '00:00',
+      verificationHour: '08:00',
     ),
     ContainerItem(
-      aliasView: 'Container 2',
-      viewUrl: 'https://example.com/container2',
+      aliasView: 'INEP',
+      viewUrl: 'https://www.gov.br/inep/pt-br',
       verificationNumber: 2,
-      verificationHour: '01:00',
+      verificationHour: '12:00',
     ),
     ContainerItem(
-      aliasView: 'Container 3',
-      viewUrl: 'https://example.com/container3',
+      aliasView: 'IBGE',
+      viewUrl: 'https://www.ibge.gov.br/',
       verificationNumber: 3,
-      verificationHour: '02:00',
+      verificationHour: '13:00',
     ),
   ];
 
@@ -38,8 +36,6 @@ class _ViewMonitoramentoState extends State<ViewMonitoramento> {
       appBar: AppBar(
         title: Text('Views'),
         centerTitle: true, // Centraliza o título
-        backgroundColor:
-            Colors.white60, // Define a cor da barra superior em um tom de cinza
       ),
       drawer: MenuLateral(), // Adiciona o menu lateral no lado esquerdo
       body: Container(
@@ -52,7 +48,6 @@ class _ViewMonitoramentoState extends State<ViewMonitoramento> {
       floatingActionButton: FloatingActionButton(
         onPressed: _navigateToNewView,
         child: Icon(Icons.add),
-        backgroundColor: Colors.grey, // Cor de fundo cinza
         shape: CircleBorder(),
       ),
     );

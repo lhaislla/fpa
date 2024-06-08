@@ -82,7 +82,6 @@ class _NewViewScreenState extends State<NewViewScreen> {
                 'Verification Period',
                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
               ),
-
               SizedBox(height: 8.0),
               Row(
                 children: <Widget>[
@@ -100,7 +99,6 @@ class _NewViewScreenState extends State<NewViewScreen> {
                       },
                     ),
                   ),
-                  SizedBox(height: 60.0),
                   SizedBox(width: 16.0),
                   Expanded(
                     flex: 2,
@@ -124,8 +122,7 @@ class _NewViewScreenState extends State<NewViewScreen> {
                 ],
               ),
               SizedBox(height: 28.0),
-              SizedBox(
-                  height: 32.0), // Aumentei o espaçamento do botão Create View
+              SizedBox(height: 32.0),
               RoundedButton(
                 onPressed: _saveNewView,
                 text: 'Create View',
@@ -177,7 +174,7 @@ class RoundedInputField extends StatelessWidget {
         labelText: hintText,
         hintText: hintText,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0), // Alterado para 30.0
+          borderRadius: BorderRadius.circular(30.0),
         ),
       ),
     );
@@ -204,7 +201,7 @@ class RoundedNumericInputField extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0), // Alterado para 30.0
+          borderRadius: BorderRadius.circular(30.0),
         ),
       ),
       onChanged: onChanged,
@@ -235,7 +232,7 @@ class RoundedDropdownButton extends StatelessWidget {
       decoration: InputDecoration(
         labelText: labelText,
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30.0), // Alterado para 30.0
+          borderRadius: BorderRadius.circular(30.0),
         ),
       ),
     );
@@ -258,16 +255,18 @@ class RoundedButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30.0), // Alterado para 30.0
+          borderRadius: BorderRadius.circular(30.0),
         ),
-        padding:
-            EdgeInsets.symmetric(vertical: 16.0), // Adicionado padding vertical
-        backgroundColor: Colors.grey, // Alterado para cinza
+        padding: EdgeInsets.symmetric(vertical: 16.0),
+        backgroundColor: Theme.of(context)
+            .primaryColor, // Usando a cor primária definida no tema global
       ),
       child: Text(
         text,
         style: TextStyle(
-            fontSize: 16.0, color: Colors.white), // Cor do texto branca
+          fontSize: 16.0,
+          color: Colors.white,
+        ),
       ),
     );
   }

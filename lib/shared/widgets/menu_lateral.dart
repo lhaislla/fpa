@@ -12,7 +12,7 @@ class MenuLateral extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.grey, // Cor de fundo do cabeçalho
+                color: Colors.orange, // Cor de fundo do cabeçalho
               ),
               child: Text(
                 'Site Checker',

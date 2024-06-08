@@ -19,27 +19,29 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login',
       routes: loadRoutes(context),
       theme: ThemeData(
-        primarySwatch: Colors.grey, // Você pode ajustar ou remover essa linha
+        // Definindo o tema padrão
+        scaffoldBackgroundColor: Colors.white, // Cor de fundo das páginas
+        primarySwatch: Colors.orange, // Cor principal do tema (laranja)
         colorScheme:
-            ColorScheme.fromSwatch(primarySwatch: Colors.grey).copyWith(
-          primary: Colors.grey,
-          secondary: Colors.grey,
+            ColorScheme.fromSwatch(primarySwatch: Colors.orange).copyWith(
+          primary: Colors.orange, // Cor primária
+          secondary: Colors.grey, // Cor secundária
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor:
-                Colors.grey, // Define a cor padrão do ElevatedButton
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.orange, // Cor do texto dos ElevatedButton
           ),
         ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
-            foregroundColor: Colors.grey, // Define a cor padrão do TextButton
+            foregroundColor: Colors.orange, // Cor do texto dos TextButton
           ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
             foregroundColor:
-                Colors.grey, // Define a cor padrão do OutlinedButton
+                Colors.orange, // Cor do contorno dos OutlinedButton
           ),
         ),
       ),
