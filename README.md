@@ -1,5 +1,4 @@
-# fpa
-## Site Checker Flutter App
+## Site Checker 
 
 * Repositório do projeto desenvolvido na disciplina de Fundamentos de Programação Aplicada do Programa de Pós-Graduação em Informática Aplicada da Universidade Federal Rural de Pernambuco. O Site Checker é um aplicativo desenvolvido em Flutter que oferece uma solução para monitoramento de disponibilidade de sites. Utilizando uma função de hash, o aplicativo associa um identificador único a cada site monitorado, permitindo verificar se o site está ativo ou inativo com base na comparação desse hash.
 
@@ -8,6 +7,21 @@
 - **Verificação de Disponibilidade:** Site Checker permite verificar se um site está ativo ou inativo com base na comparação de um hash único associado a ele.
 - **Função de Hash:** Uma função de hash é utilizada para gerar um identificador único (hash) para cada site com base no seu ID. Esse hash é armazenado e comparado em cada verificação para detectar alterações.
 - **Monitoramento Automatizado:** O aplicativo realiza verificações periódicas de disponibilidade dos sites, comparando o hash atual com o hash armazenado. Qualquer alteração no hash indica uma possível mudança na disponibilidade do site.
+
+## Apresentação do aplicativo
+
+
+Link para o vídeo de apresentação/pitch: https://www.loom.com/share/a5e07d1d823b43d6828e6c97f890616c?sid=a4a131f2-458f-4394-ba58-c90aca2c145c
+
+Link para o vídeo de demonstração:
+
+
+
+## Play Store
+
+Link  para página do aplicativo na Play Store: https://play.google.com/apps/internaltest/4700672426513051783 
+
+
 
 ## Como Usar
 
