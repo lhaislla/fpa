@@ -10,18 +10,13 @@
 
 ## Apresentação do aplicativo
 
+- **Link para o vídeo de apresentação/pitch:** https://www.loom.com/share/a5e07d1d823b43d6828e6c97f890616c?sid=a4a131f2-458f-4394-ba58-c90aca2c145c
 
-Link para o vídeo de apresentação/pitch: https://www.loom.com/share/a5e07d1d823b43d6828e6c97f890616c?sid=a4a131f2-458f-4394-ba58-c90aca2c145c
-
-Link para o vídeo de demonstração:
-
-
+- **Link para o vídeo de demonstração:**
 
 ## Play Store
 
-Link  para página do aplicativo na Play Store: https://play.google.com/apps/internaltest/4700672426513051783 
-
-
+- **Link  para página do aplicativo na Play Store:** https://play.google.com/apps/internaltest/4700672426513051783 
 
 ## Como Usar
 
