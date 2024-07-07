@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fpa/core/widgets/AppIcon/icon.dart';
 import 'package:fpa/shared/widgets/Buttons/DefaultButton.dart';
 import 'package:fpa/shared/widgets/Buttons/SecondButton.dart';
 import 'package:fpa/shared/widgets/Inputs/AppInput.dart';
 import 'package:fpa/views/LoginScreen/cadastro.dart';
 import 'package:fpa/views/LoginScreen/reset_password.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fpa/views/ViewScreen/home_monitoramento.dart';
 import 'package:fpa/services/auth_service.dart';
 import 'package:fpa/shared/widgets/menu_lateral.dart';
@@ -28,9 +28,26 @@ class LoginScreen extends StatelessWidget {
         MaterialPageRoute(builder: (context) => Home()),
       );
     } catch (e) {
-      // Em caso de erro, exiba uma mensagem ou trate de outra forma
+      // Em caso de erro, exiba um AlertDialog com a mensagem de erro
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text("Erro de Login"),
+            content: Text(
+                "Ocorreu um erro ao fazer login. Verifique suas credenciais e tente novamente."),
+            actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(context); // Fecha o AlertDialog
+                },
+                child: Text("OK"),
+              ),
+            ],
+          );
+        },
+      );
       print("Error signing in: $e");
-      // Aqui você poderia exibir um AlertDialog, Snackbar, etc.
     }
   }
 
@@ -80,8 +97,25 @@ class LoginScreen extends StatelessWidget {
                         print("Login com Google falhou");
                       }
                     } catch (e) {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text("Erro ao fazer login com Google"),
+                            content: Text(
+                                "Ocorreu um erro ao fazer login com Google. Tente novamente."),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context); // Fecha o AlertDialog
+                                },
+                                child: Text("OK"),
+                              ),
+                            ],
+                          );
+                        },
+                      );
                       print("Erro ao fazer login com Google: $e");
-                      // Trate o erro aqui, exiba uma mensagem, etc.
                     }
                   },
                   icon: Icons.account_circle,

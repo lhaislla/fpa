@@ -1,18 +1,24 @@
 {
   "project_info": {
     "project_number": "247669622807",
+    "firebase_url": "https://fpa2024-ef00d-default-rtdb.firebaseio.com",
     "project_id": "fpa2024-ef00d",
     "storage_bucket": "fpa2024-ef00d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:247669622807:android:5b50eeb6128028b2b2b452",
+        "mobilesdk_app_id": "1:247669622807:android:32cd1fbed01ecb58b2b452",
         "android_client_info": {
           "package_name": "sitechecker.fpa"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "247669622807-qvn10mufj4ince27kqnao4el914rk5p5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyA_EuUcp6er1iCRHIeX2izauTGOKR96sh4"
@@ -20,7 +26,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247669622807-qvn10mufj4ince27kqnao4el914rk5p5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "247669622807-70p6q7sm1ar6ok2pnl1qjigu5hu42j7j.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.fpa"
+              }
+            }
+          ]
         }
       }
     }

@@ -4,8 +4,14 @@ import 'package:fpa/shared/widgets/Buttons/DefaultButton.dart';
 import 'package:fpa/shared/widgets/Inputs/AppInput.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class ResetPasswordScreen extends StatelessWidget {
+class ResetPasswordScreen extends StatefulWidget {
+  @override
+  _ResetPasswordScreenState createState() => _ResetPasswordScreenState();
+}
+
+class _ResetPasswordScreenState extends State<ResetPasswordScreen> {
   final TextEditingController _emailController = TextEditingController();
+  String _errorMessage = '';
 
   Future<void> _resetPassword(BuildContext context) async {
     try {
@@ -31,25 +37,9 @@ class ResetPasswordScreen extends StatelessWidget {
         },
       );
     } catch (e) {
-      // Exibe uma mensagem de erro em caso de falha no reset de senha
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text("Password Reset Failed"),
-            content: Text("Error: $e"),
-            actions: <Widget>[
-              TextButton(
-                child: Text("OK"),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          );
-        },
-      );
-      print("Error sending password reset email: $e");
+      setState(() {
+        _errorMessage = "Error: $e";
+      });
     }
   }
 
@@ -77,6 +67,19 @@ class ResetPasswordScreen extends StatelessWidget {
                   },
                   text: 'Send password reset email',
                 ),
+                SizedBox(height: 20),
+                if (_errorMessage.isNotEmpty)
+                  Container(
+                    padding: EdgeInsets.all(10),
+                    color: Colors.redAccent,
+                    child: Text(
+                      _errorMessage,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
                 SizedBox(height: 20),
                 GestureDetector(
                   onTap: () {

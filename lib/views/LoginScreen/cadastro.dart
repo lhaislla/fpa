@@ -3,7 +3,7 @@ import 'package:fpa/core/widgets/AppIcon/icon.dart';
 import 'package:fpa/shared/widgets/Buttons/DefaultButton.dart';
 import 'package:fpa/shared/widgets/Inputs/AppInput.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart'; // Adicione esta linha
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class CadastroScreen extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
