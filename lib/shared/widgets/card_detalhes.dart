@@ -68,6 +68,7 @@ class CardDetailScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('$cardNumber'),
         centerTitle: true,
+        backgroundColor: Colors.orange,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),

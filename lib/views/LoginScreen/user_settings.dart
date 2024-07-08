@@ -65,6 +65,7 @@ class _UserSettingsScreenState extends State<UserSettingsScreen> {
       appBar: AppBar(
         title: Text('Edit User'),
         centerTitle: true,
+        backgroundColor: Colors.orange,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

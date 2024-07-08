@@ -35,7 +35,8 @@ class _ViewMonitoramentoState extends State<ViewMonitoramento> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Views'),
-        centerTitle: true, // Centraliza o título
+        centerTitle: true,
+        backgroundColor: Colors.orange, // Centraliza o título
       ),
       drawer: MenuLateral(), // Adiciona o menu lateral no lado esquerdo
       body: Container(

@@ -50,6 +50,7 @@ class _NewViewScreenState extends State<NewViewScreen> {
       appBar: AppBar(
         title: Text('New View'),
         centerTitle: true,
+        backgroundColor: Colors.orange,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),

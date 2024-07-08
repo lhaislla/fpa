@@ -37,6 +37,20 @@ class MenuLateral extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.notifications),
+              title: Text('Notificações'),
+              onTap: () {
+                Navigator.pushNamed(context, '/view_notificacao');
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.share),
+              title: Text('Compartilhado'),
+              onTap: () {
+                Navigator.pushNamed(context, '/view_compartilhamento');
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.settings),
               title: Text('Settings'),
               onTap: () {
