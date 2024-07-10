@@ -49,7 +49,7 @@ android {
 
     defaultConfig {
         applicationId "sitechecker.fpa"
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 33// Aqui você altera para o nível da API desejado
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -90,6 +90,7 @@ flutter {
 dependencies {
    
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version")
     // implementation("com.google.firebase:firebase-auth")
     // implementation("com.google.android.gms:play-services-auth:21.0.0")
     }

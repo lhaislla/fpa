@@ -63,7 +63,7 @@ class SharedViewsScreen extends StatelessWidget {
       ),
       margin: EdgeInsets.symmetric(vertical: 10.0),
       child: ListTile(
-        leading: Icon(Icons.notifications, color: Colors.orange),
+        leading: Icon(Icons.share, color: Colors.orange),
         title: Text(
           alias,
           style: TextStyle(fontWeight: FontWeight.bold),
